@@ -16,7 +16,8 @@
     <label for="">Enter your Last Name</label><br><br>
     <textarea for=""></textarea><input type="text" placeholder="Enter Address"><br><br>
 
- 
+    <label for="">Enter your City:</label><input type="text"><br><br>
+    <label for="">Enter your pincode:</label><input type="text"><br><br>
     
         <label for="">Enter your State:</label><br><br>
         <select>
@@ -56,9 +57,26 @@
                 <label for="">choose your favourite color
                 </label><input type="color"><br><br>
                 <label for="">Choose your hiddens:</label><input type="hidden"><br><br>
+                <label for=""> Choose your range:</label><input type="rnage"><br><br>
+                <lable for="">Choose your month:</lable><input type="month"><br><br>
+                <label for="">Choose your week:</label><input type="week"><br><br>
+                <label for="">Choose your time:</label><input type="text"><br><br>
+                <label for="">Choose your number:</label><input type="number"><br><br>
+                <label for="">Choose your search:</label><input type="search"><br><br>
+                <label for="">choose your Url:</label><input type="url"><br><br>
+                <label for="">Choose your tel:</label><input type="tel"><br><br>
                 <label for="">Submit your Form</label><input type="submit" value="submit"><br><br>
+                <label for="">Reset your Form </label><input type="reset" value-="reset"><br><br>
+                <label for="">Button </label><input type="button" value="click me"><br><br>
+                <label for="">Image Button </label><input type="image" src="" alt="submit"><br><br>
+                <label for="">Checkbox </label>
+                <input type="checkbox" name="option1" value="option1"> Option1 
+                <input type="checkbox" name="option2" value="option2"> Option2
+                <input type="checkbox" name="opyion3" value="option3"> Option3<br><br>
+                <label for="">Radio Button </label>
+                <input type="radio"><br><br>
+            </fieldset>
                 
-
 
 
 
@@ -79,40 +97,30 @@
 </body>
 </html>
 </fieldset><br><br>
-<!--Multi-media-tags-->
-        <ul>
-    <li>tiger</li>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRecKUVj0be-3RTBnHGYjnoBfwoNXFnACMqDA&s" alt="">
-    <audio controls src="./tiger-roar.mp3" alt=""></audio>
-    <video controls autoplay src="./tiger-video.mp4" width="300px" height="300px" alt=""></video>
-    <a href="https://en.wikipedia.org/wiki/Tiger"> Learn more about tiger</a>
-    <br/>
-    </a>>
-    <li>lion</li>
-    <img src="https://static.vecteezy.com/system/resources/previews/026/525/162/non_2x/lion-animal-isolated-photo.jpg" width="350px" height="350px" alt="">
-    <audio controls src="./lion-roar.mp3" alt=""></audio>
-    <video controls autoplay src="./lion-video.mp4" width="500px" height="500px" alt=""></video>
-    <a href="https://en.wikipedia.org/wiki/Lion"> Learn more about lion</a>
-    <li>Elephant</li>
-    <li>rabbit</li>
-</ul>
-<a href="/Users/Guest/Documents/aditi"> this is a link to the aditi folder</a>
-<br/>
 
-<h1>
-<fieldset>
-    <legend> HTML Form </legend>
-</h1>
+
+
+    <fieldset>
+    <legend><h1> HTML Form </h1></legend>
+
 <h2>
-<label for="">First Name :</label><input type="text"><br><br>
+<label for="">First Name :</label><input type="text" required><br><br>
 <label for="">Last Name :</label><input type="text"><br><br>
 <label for="">Date of Birth :</label><input type="date"><br><br>
 <label for="">Email :</label><input type="email"><br><br>
 <label for="">mobile📱Number :</label><input type="text"><br><br> 
 </h2>
 <h2>
-<button class="btn" onclick="location.href='submit.html'">submit</button>
-<buton class="btn" onclick="location.href='Reset.html'">Reset</buton>
-</h2>
-</fieldset>
-</hr>
+<button type="submit">submit</button>
+<fieldset>
+    <legend><h1>Admission form - Personal Details</h1> </legend>
+   <form action="submit_form.php" method="post">
+    <label for="name">Full Name:<br><br></label><input type="text"><br><br>
+<label for="dob">Date of Birth:</label><input type="date"><br><br>
+<label for="gender">Gender:<br><br></label><input type="radio" name="gender" value="male"> Male
+    <input type="radio" name="gender" value="female"> Female
+    <input type="radio" name="gender" value="other"> Other<br><br>
+   <label for="nationality">Nationality:<br><br></label><input type="text"><br><br>
+   <button type="next">Next➡️</button>
+   <a href="./assets.html">Go to Assets</a>
+   </form> 
