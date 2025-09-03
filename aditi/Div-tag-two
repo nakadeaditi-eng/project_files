@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Aditi</title>
+    <style>
+     .top-container{
+        width: 1000px;
+        height: 200px;
+        background-color: lightcoral;
+     }
+
+
+    </style>
+</head>
+<body>
+<!-- division-Tag -->
+ <div class="main-container">
+    <div class="top-container">
+    <h1>India</h1>
+    <p style="text-shadow: 2px 2px 2px red;">India is My country.</p>
+ </div>
+ </div>
+ <div></div>
+ <div></div>
+
+ </body>
+ </html>
