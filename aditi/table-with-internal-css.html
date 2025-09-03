@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Table with internal css</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 5px;
+    }
+    th {
+      background-color: pink;
+    }
+    .subjects-header {
+      background-color: pink;
+      writing-mode: vertical-rl; 
+      transform: rotate(180deg);
+      font-weight: bold;
+    }
+    .pass {
+      color: green;
+      font-weight: bold;
+    }
+    .fail {
+      color: red;
+      font-weight: bold;
+    }
+    .photo img {
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <caption><b>Table No.1 Students' Information</b></caption>
+    <tr>
+      <th>Sr.No.</th>
+      <th>Roll No.</th>
+      <th>Student Name</th>
+      <th class="subjects-header" rowspan="10">Subjects</th>
+      <th>Subject Name</th>
+      <th>Obtained Marks</th>
+      <th>Pass/Fail</th>
+      <th>Photo Id</th>
+    </tr>
+    <!-- First Student -->
+    <tr>
+      <td rowspan="3">1.</td>
+      <td rowspan="3">001</td>
+      <td rowspan="3">Ansh</td>
+      <td>English</td>
+      <td>73</td>
+      <td rowspan="3" class="pass">Pass</td>
+      <td rowspan="3" class="photo"><img src="https://img.serialxpress.com/2025/03/11/serial-update-1741660123.jpg" width="400px" height="400px" alt="Ansh"></td>
+    </tr>
+    <tr>
+      <td>Hindi</td>
+      <td>81</td>
+    </tr>
+    <tr>
+      <td>Marathi</td>
+      <td>79</td>
+    </tr>
+    <!-- Second Student -->
+    <tr>
+      <td rowspan="3">2.</td>
+      <td rowspan="3">002</td>
+      <td rowspan="3">Disha</td>
+      <td>English</td>
+      <td>93</td>
+      <td rowspan="3" class="pass">Pass</td>
+      <td rowspan="3" class="photo"><img src="https://images.indianexpress.com/2025/07/Disha-Vakani-.jpg" width="400px" height="400px" alt="Disha"></td>
+    </tr>
+    <tr>
+      <td>Hindi</td>
+      <td>89</td>
+    </tr>
+    <tr>
+      <td>Marathi</td>
+      <td>87</td>
+    </tr>
+    <!-- Third Student -->
+    <tr>
+      <td rowspan="3">3.</td>
+      <td rowspan="3">003</td>
+      <td rowspan="3">Krutika</td>
+      <td>English</td>
+      <td>33</td>
+      <td rowspan="3" class="fail">Fail</td>
+      <td rowspan="3" class="photo"><img src="https://akm-img-a-in.tosshub.com/aajtak/images/story/202412/675ad4a7305f8-anupamaa-actress-krutika-desai-121841507-16x9.jpg?size=948:533" width="400px" height="400px" alt="Krutika"></td>
+    </tr>
+    <tr>
+      <td>Hindi</td>
+      <td>64</td>
+    </tr>
+    <tr>
+      <td>Marathi</td>
+      <td>59</td>
+    </tr>
+    <!-- Total Passed -->
+    <tr>
+      <td colspan="4">Total Passed</td>
+      <td>--</td>
+      <td>2</td>
+      <td>2</td>
+      <td>--</td>
+    </tr>
+  </table>
+</body>
+</html>
