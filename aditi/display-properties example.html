@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Display Properties Demo</title>
+</head>
+<body style="font-family: Arial;">
+
+  <h1>Display Properties Demo</h1>
+
+  <!-- BLOCK Example -->
+  <h2>1. display: block</h2>
+  <div style="display:block; background:lightblue; padding:10px; margin:5px;">
+    Block Element 1
+  </div>
+  <div style="display:block; background:lightgreen; padding:10px; margin:5px;">
+    Block Element 2
+  </div>
+  <p>👉 Block elements hamesha <b>nayi line se start</b hote hain aur puri width le lete hain.</p>
+
+  <hr>
+
+  <!-- INLINE Example -->
+  <h2>2. display: inline</h2>
+  <span style="display:inline; background:orange; padding:5px;">Inline 1</span>
+  <span style="display:inline; background:yellow; padding:5px;">Inline 2</span>
+  <span style="display:inline; background:pink; padding:5px;">Inline 3</span>
+  <p>👉 Inline elements <b>same line</b> me aate hain aur sirf apne content jitna space lete hain.</p>
+
+  <hr>
+
+  <!-- INLINE-BLOCK Example -->
+  <h2>3. display: inline-block</h2>
+  <span style="display:inline-block; width:120px; height:60px; background:lightcoral; text-align:center; line-height:60px; margin:5px;">
+    Box 1
+  </span>
+  <span style="display:inline-block; width:120px; height:60px; background:lightseagreen; text-align:center; line-height:60px; margin:5px;">
+    Box 2
+  </span>
+  <span style="display:inline-block; width:120px; height:60px; background:lightgoldenrodyellow; text-align:center; line-height:60px; margin:5px;">
+    Box 3
+  </span>
+  <p>👉 Inline-block elements <b>same line</b> me rahte hain <br> aur aap unki <b>width/height</b> set kar sakte ho (jo inline me possible nahi hota).</p>
+
+  <hr>
+
+  <!-- NONE Example -->
+  <h2>4. display: none</h2>
+  <p>👇 Isme ek element hide kiya gaya hai (Box 2 dikhai nahi dega).</p>
+  <div style="display:inline-block; width:100px; height:50px; background:tomato; margin:5px;">Box 1</div>
+  <div style="display:none; width:100px; height:50px; background:skyblue; margin:5px;">Box 2</div>
+  <div style="display:inline-block; width:100px; height:50px; background:lime; margin:5px;">Box 3</div>
+  <p>👉 <b>display:none</b> element ko completely hide kar deta hai (wo space bhi nahi lega).</p>
+
+</body>
+</html>

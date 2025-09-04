@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Display Properties Demo (All)</title>
+</head>
+<body style="font-family: Arial;">
+
+  <h1>Display Properties Demo (Block, Inline, Inline-block, None, Flex, Grid)</h1>
+
+  <!-- BLOCK Example -->
+  <h2>1. display: block</h2>
+  <div style="display:block; background:lightblue; padding:10px; margin:5px;">
+    Block Element 1
+  </div>
+  <div style="display:block; background:lightgreen; padding:10px; margin:5px;">
+    Block Element 2
+  </div>
+  <p>👉 Block elements hamesha <b>nayi line</b> se start hote hain aur puri width le lete hain.</p>
+
+  <hr>
+
+  <!-- INLINE Example -->
+  <h2>2. display: inline</h2>
+  <span style="display:inline; background:orange; padding:5px;">Inline 1</span>
+  <span style="display:inline; background:yellow; padding:5px;">Inline 2</span>
+  <span style="display:inline; background:pink; padding:5px;">Inline 3</span>
+  <p>👉 Inline elements <b>same line</b> me aate hain aur sirf content jitna space lete hain.</p>
+
+  <hr>
+
+  <!-- INLINE-BLOCK Example -->
+  <h2>3. display: inline-block</h2>
+  <span style="display:inline-block; width:120px; height:60px; background:lightcoral; text-align:center; line-height:60px; margin:5px;">
+    Box 1
+  </span>
+  <span style="display:inline-block; width:120px; height:60px; background:lightseagreen; text-align:center; line-height:60px; margin:5px;">
+    Box 2
+  </span>
+  <span style="display:inline-block; width:120px; height:60px; background:lightgoldenrodyellow; text-align:center; line-height:60px; margin:5px;">
+    Box 3
+  </span>
+  <p>👉 Inline-block elements same line me rahte hain <br> aur unki <b>width/height</b> set kar sakte ho.</p>
+
+  <hr>
+
+  <!-- NONE Example -->
+  <h2>4. display: none</h2>
+  <p>👇 Yaha Box 2 ko hide kiya gaya hai (wo space bhi nahi lega).</p>
+  <div style="display:inline-block; width:100px; height:50px; background:tomato; margin:5px;">Box 1</div>
+  <div style="display:none; width:100px; height:50px; background:skyblue; margin:5px;">Box 2</div>
+  <div style="display:inline-block; width:100px; height:50px; background:lime; margin:5px;">Box 3</div>
+  <p>👉 <b>display:none</b> element ko DOM me rakhta hai par dikhata nahi.</p>
+
+  <hr>
+
+  <!-- FLEX Example -->
+  <h2>5. display: flex</h2>
+  <div style="display:flex; gap:10px; background:#f0f0f0; padding:10px;">
+    <div style="background:red; width:80px; height:80px;"></div>
+    <div style="background:blue; width:80px; height:80px;"></div>
+    <div style="background:green; width:80px; height:80px;"></div>
+  </div>
+  <p>👉 Flex ek <b>flexible row/column layout</b> banata hai. By default items ek row me arrange hote hain.</p>
+
+  <hr>
+
+  <!-- GRID Example -->
+  <h2>6. display: grid</h2>
+  <div style="display:grid; grid-template-columns: 100px 100px 100px; gap:10px; background:#f9f9f9; padding:10px;">
+    <div style="background:purple; height:80px;"></div>
+    <div style="background:orange; height:80px;"></div>
+    <div style="background:teal; height:80px;"></div>
+    <div style="background:pink; height:80px;"></div>
+    <div style="background:lightblue; height:80px;"></div>
+    <div style="background:lightgreen; height:80px;"></div>
+  </div>
+  <p>👉 Grid me elements <b>rows aur columns</b> ke form me arrange hote hain.</p>
+
+</body>
+</html>
