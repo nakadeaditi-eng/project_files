@@ -1,18 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
-    <title>layout 3</title>
-</head>
-<style>
+  <title> Layout 3 </title>
+  <style>
+    .main-container {
+      width: 1000px;
+      height: 600px;
+      border: 2px solid black;
+      display: flex;
+    }
 
-</style>
+    .box {
+      border: 1px solid black;
+      box-sizing: border-box;
+    }
+
+    /* ---------- LEFT CONTAINER ---------- */
+    .left-container {
+      width: 50%;
+      display: flex;
+    }
+
+    .left-col1 {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+    }
+    .left-col1 .row-big {
+      flex: 2;
+      background: lightcoral;
+    }
+    .left-col1 .row-small {
+      flex: 1;
+      background: lightpink;
+    }
+
+    .left-col2 {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+    }
+    .left-col2 .row-empty {
+      flex: 1;
+      background: red;
+    }
+    .left-col2 .row-two {
+      flex: 1;
+      display: flex;
+    }
+    .left-col2 .row-two .box {
+      width: 50%;
+      background: lightblue;
+    }
+
+    /* ---------- RIGHT CONTAINER ---------- */
+    .right-container {
+      width: 50%;
+      display: flex;
+    }
+
+    /* Right Column 1 */
+    .right-col1 {
+      width: 33%;
+      display: flex;
+      flex-direction: column;
+    }
+    .right-col1 .row-double {
+      flex: 2;
+      background: lightgreen;
+      margin-bottom: 2px;
+    }
+    .right-col1 .row-double-extra {
+      flex: 2;
+      display: flex;
+    }
+    .right-col1 .row-double-extra .box {
+      flex: 1;
+      background: darkgreen;
+    }
+    .right-col1 .row-double-extra .extra-col {
+      flex: 1;
+      background: greenyellow;
+    }
+
+    /* Right Column 2 */
+    .right-col2 {
+      width: 33%;
+      display: flex;
+      flex-direction: column;
+    }
+    .right-col2 .row-triple {
+      flex: 3;
+      background: khaki;
+    }
+    .right-col2 .row-fill {
+      flex: 1;
+      background: gold;
+    }
+
+    /* Right Column 3 */
+    .right-col3 {
+      width: 34%;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .right-col3 .row-double {
+      flex: 2;
+      background: plum;
+      display: flex;
+      justify-content: flex-start; /* left side */
+      align-items: flex-end;       /* bottom line touch */
+      padding-left: 0;
+    }
+    .right-col3 .row-double .inner-box {
+      width: 50%;      /* width of box */
+      height: 50%;     /* height 50% of parent row */
+      background: blue;
+    }
+  </style>
+</head>
 <body>
-    <div class="main-container">
-    <div class="first-column-container">
-        <div class="first-one-container"></div>
-        <div class="first-two-container"></div>
+  <div class="main-container">
+
+    <!-- LEFT CONTAINER -->
+    <div class="left-container">
+
+      <!-- Left Column 1 -->
+      <div class="left-col1">
+        <div class="box row-big"></div>
+        <div class="box row-small"></div>
+        <div class="box row-big"></div>
+      </div>
+
+      <!-- Left Column 2 -->
+      <div class="left-col2">
+        <div class="box row-empty"></div>
+        <div class="row-two">
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div class="row-two">
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div class="row-two">
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+      </div>
+
     </div>
-    <div class="second-column container"></div>
+
+    <!-- RIGHT CONTAINER -->
+    <div class="right-container">
+
+      <!-- Right Column 1 -->
+      <div class="right-col1">
+        <div class="box row-double"></div>
+        <div class="row-double-extra">
+          <div class="box"></div>
+          <div class="extra-col"></div>
+        </div>
+      </div>
+
+      <!-- Right Column 2 -->
+      <div class="right-col2">
+        <div class="box row-triple"></div>
+        <div class="box row-fill"></div>
+      </div>
+
+      <!-- Right Column 3 -->
+      <div class="right-col3">
+        <div class="box row-double">
+          <div class="inner-box"></div> <!-- left side, bottom line touch -->
+        </div>
+        <div class="box row-double"></div>
+      </div>
+
+    </div>
+
+  </div>
 </body>
 </html>
