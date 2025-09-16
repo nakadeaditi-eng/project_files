@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lovers Magazine - Clone</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{
+      font-family: "Inter", Arial, sans-serif;
+      background:#fff;
+      color:#111;
+      line-height:1.6;
+    }
+    a{text-decoration:none;color:inherit}
+
+    /* Container */
+    .container{width:90%;max-width:1200px;margin:0 auto}
+
+    /* Header */
+    .header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:25px 0;
+      border-bottom:1px solid #eee;
+    }
+    .logo{
+      font-size:20px;
+      font-weight:bold;
+      letter-spacing:1px;
+      text-transform:uppercase;
+    }
+    .nav{display:flex;gap:30px}
+    .nav a{
+      font-size:14px;
+      text-transform:uppercase;
+      color:#444;
+    }
+    .nav a:hover{color:#000}
+
+    /* Hero Section */
+    .hero{
+      display:flex;
+      flex-wrap:wrap;
+      gap:40px;
+      align-items:center;
+      margin:60px 0;
+    }
+    .hero-left{flex:1 1 500px}
+    .hero-left h1{
+      font-size:64px;
+      font-weight:700;
+      line-height:1.1;
+      margin-bottom:20px;
+    }
+    .hero-left p{
+      font-size:18px;
+      color:#555;
+      margin-bottom:25px;
+      max-width:500px;
+    }
+    .btn{
+      display:inline-block;
+      background:#000;
+      color:#fff;
+      padding:14px 32px;
+      border-radius:4px;
+      font-size:14px;
+      letter-spacing:1px;
+      text-transform:uppercase;
+    }
+    .btn:hover{background:#e63946}
+    .hero-right{
+      flex:1 1 400px;
+      border-radius:8px;
+      overflow:hidden;
+    }
+    .hero-right img{
+      width:100%;
+      height:auto;
+      display:block;
+    }
+
+    /* Featured Articles */
+    .featured{
+      display:flex;
+      flex-wrap:wrap;
+      gap:30px;
+      margin-bottom:80px;
+    }
+    .card{
+      flex:1 1 350px;
+      min-width:300px;
+    }
+    .card img{
+      width:100%;
+      height:240px;
+      object-fit:cover;
+      border-radius:8px;
+    }
+    .card-info{margin-top:12px}
+    .card-info h3{
+      font-size:22px;
+      margin-bottom:6px;
+      font-weight:bold;
+    }
+    .card-info p{
+      font-size:14px;
+      color:#777;
+    }
+
+    /* More Articles */
+    .more{
+      display:flex;
+      flex-wrap:wrap;
+      gap:25px;
+      margin-bottom:80px;
+    }
+    .mini-card{
+      flex:1 1 250px;
+      min-width:220px;
+    }
+    .mini-card img{
+      width:100%;
+      height:160px;
+      object-fit:cover;
+      border-radius:8px;
+    }
+    .mini-card h4{
+      margin-top:10px;
+      font-size:18px;
+      font-weight:600;
+    }
+    .mini-card p{
+      font-size:13px;
+      color:#666;
+    }
+
+    /* Footer */
+    .footer{
+      border-top:1px solid #eee;
+      padding:40px 0;
+      text-align:center;
+      font-size:14px;
+      color:#777;
+    }
+
+    /* Responsive */
+    @media(max-width:768px){
+      .hero{flex-direction:column}
+      .hero-left h1{font-size:42px}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Header -->
+    <div class="header">
+      <div class="logo">Lovers Magazine</div>
+      <div class="nav">
+        <a href="#">Home</a>
+        <a href="#">Interviews</a>
+        <a href="#">Mixes</a>
+        <a href="#">About</a>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <div class="hero">
+      <div class="hero-left">
+        <h1>Leena Murdeshwar</h1>
+        <p>Leena is a New York–based visual designer and storyteller, weaving bold cultural roots, thoughtful strategy, and everyday play into her work.</p>
+        <a href="#" class="btn">Read Interview</a>
+      </div>
+      <div class="hero-right">
+        <img src="https://source.unsplash.com/800x600/?portrait,woman" alt="Hero Image">
+      </div>
+    </div>
+
+    <!-- Featured Articles -->
+    <div class="featured">
+      <div class="card">
+        <img src="https://source.unsplash.com/600x400/?design" alt="">
+        <div class="card-info">
+          <h3>Founder — Combo</h3>
+          <p>Recent Interview</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/600x400/?workspace" alt="">
+        <div class="card-info">
+          <h3>Julian Herbst</h3>
+          <p>Product Designer</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/600x400/?artist" alt="">
+        <div class="card-info">
+          <h3>Alex Khomutov</h3>
+          <p>Product Designer</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- More Articles -->
+    <div class="more">
+      <div class="mini-card">
+        <img src="https://source.unsplash.com/400x300/?creative" alt="">
+        <h4>New Creative Voices</h4>
+        <p>Short features on emerging talent.</p>
+      </div>
+      <div class="mini-card">
+        <img src="https://source.unsplash.com/400x300/?culture" alt="">
+        <h4>Culture Notes</h4>
+        <p>Stories from global communities.</p>
+      </div>
+      <div class="mini-card">
+        <img src="https://source.unsplash.com/400x300/?studio" alt="">
+        <h4>Inside Studios</h4>
+        <p>A look into artists’ workspaces.</p>
+      </div>
+      <div class="mini-card">
+        <img src="https://source.unsplash.com/400x300/?magazine" alt="">
+        <h4>Archive Reads</h4>
+        <p>Highlights from past issues.</p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      © 2025 Lovers Magazine — Discover Modern Creatives.
+    </div>
+
+  </div>
+
+</body>
+</html>
