@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title> Grid </title>
+    <style>
+        .main-container{
+            width: 1000px;
+            height: 600px;
+            border: 2px solid black;
+            display: flex;
+        }
+        .box{
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+        .left-container{
+            width: 50%;
+            display: flex;
+        }
+        .left-col1{
+            width: 33%;
+            display: flex;
+            flex-direction: column;
+        }
+        .left-col1 .row-big{
+            flex: 2;
+            background-color: darkblue;
+        }
+        .left-col1 .row-small{
+            flex: 1;
+            background-color: darkgray;
+        }
+        .left-col2{
+            width: 34%;
+            display: flex;
+            flex-direction: column;
+        }
+        .left-col2 .row-span{
+            flex: 3;
+            background-color: darkcyan;
+        }
+        .left-col2 .row-single{
+            flex: 1;
+            background-color: darkgoldenrod;
+        }
+    </style>
+</head>
+<body>
+   <div class="main-container">
+
+    <!-- LEFT CONTAINER -->
+    <div class="left-container">
+
+      <!-- Left Column 1 -->
+      <div class="left-col1">
+        <div class="box row-big"></div>
+        <div class="box row-small"></div>
+        <div class="box row-big"></div>
+      </div>
+
+      <!-- Left Column 2 -->
+      <div class="left-col2">
+        <div class="box row-span"></div>
+        <div class="box row-single"></div>
+      </div>
+
+      <!-- Left Column 3 -->
+      <div class="left-col3">
+        <div class="box row-normal"></div>
+        <div class="box row-normal"></div>
+        <div class="box row-double"></div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT CONTAINER -->
+    <div class="right-container">
+
+      <div class="box right-row1"></div>
+
+      <div class="right-row2">
+        <div class="half box"></div>
+        <div class="divider"></div>
+        <div class="half box"></div>
+      </div>
+
+      <div class="right-row3">
+        <div class="col-left box"></div>
+        <div class="col-right">
+          <div class="small-box" style="width: 70px; height: 70px;"></div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</body>
+</html>
