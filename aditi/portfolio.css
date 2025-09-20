@@ -60,6 +60,13 @@
     text-align: center;
     padding: 20px;
   }
+  .title-left{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+  }
   /* about section css end */
 
   /* project section css start */
@@ -71,12 +78,21 @@
   .project-title{
   
     width: 100%;
-    height: 10%;
+  height: 10%;
     color: white;
      text-align: center;
      padding-top: 20px;
   }
-.project-cards{
+  .product-card{
+    width: 200px;
+    height: 300px;
+    background-color: aqua;
+    display: flex;
+    justify-content: space-evenly; 
+    align-items: center;
+    flex-wrap: wrap;
+  }
+.product-cards{
     width: 80%;
     height: 80%;
    
@@ -85,6 +101,32 @@
     flex-wrap: wrap;
     gap: 20px;
     align-items: center;
+}
+.card-image{
+  width: 80%;
+  height: 60%;
+  background-image: url("https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSCnEnUk8S15XOiH56HLCkgrPiOucxqeCeoMXqgErjCtPom-cQ_lNaSWXSSjQRVrNi5at8XloGTIIjP7Sgo-O300lPcS-jpXgysEj5K47T0AXErZ_asi3TKGw");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.card-image1{
+width: 80%;
+height: 60%;
+background-image: url("https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSzbq6QM0c5a0jae547hajG3ykzpWuq-5uNl1AW2Ekthd9HheRjURsL7kZWcOJ-qjrlKRvoLH6Uy0a06_ERLw459QQLEK0zKWEu-sf0QxLzcKxttKtIIz6gnQ");
+background-size: cover;
+background-repeat: no-repeat;
+}
+.card-content1{
+  width: 80%;
+  height: 20%;
+  
+}
+.card-content{
+  width: 80%;
+  height: 20%;
+ padding: 0;
+ margin: 0;
+  font-size: 25px;
 }
 .card{
     width: 20%;
