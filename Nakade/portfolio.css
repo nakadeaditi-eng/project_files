@@ -189,6 +189,35 @@ background-repeat: no-repeat;
   background-size: cover;
   background-repeat: no-repeat;
 }
+.card-content7{
+  width: 80%;
+  height: 60%;
+  font-size: 25px;
+}
+.card-image8{
+  width: 80%;
+  height: 60%;
+  background-image: url("https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT-TwN03ia7yyqdAAEAJ-9P-inIHZCUUXtrSzBu-dectfMauMky5gEMU5ha-iD23UZswjreGcl2c2sYHPsfCLwYdxEoUn2TGF8p4xPjIIbKJ_vIh-uhVG7RJw");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.card-content8{
+  width: 80%;
+  height: 60%;
+  font-size: 25px;
+}
+.card-image9{
+  width: 80%;
+  height: 60%;
+  background-image: url("https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTxdIR_GrjTUmfiNq5s7F6VE-yXNTEdpmMEOQAhqk4xbQEUoDLNmswvIouNb2RkeFFJCbmQ0t3ceNRIdTCdyDaE7IrUH-Xgl40dFc6M2OW90rIefJAmI1G1e3Y");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.card-content9{
+  width: 80%;
+  height: 60%;
+  font-size: 25px;
+}
 .card-content{
   width: 80%;
   height: 20%;
