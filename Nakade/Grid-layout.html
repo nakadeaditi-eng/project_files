@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Grid layout</title>
+    <style>
+       body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: gray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       }
+       .container{
+        width: 1200px;
+        height: 1200px;
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: repeat(1, 1fr);
+        background-color: lightcoral;
+        border: solid 2px black;
+        justify-content: center;
+        align-content: center;
+       }
+       .box{
+        background-color: aqua;
+        border: solid 2px black;
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box" style="width: 100px; height: 100px; background-color: blue;"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

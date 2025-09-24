@@ -9,20 +9,21 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background-color: beige;
+            background-color: lightgray;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+           
+           
             }
 
         .container {
-            width: 600px;
-            height: 900px;
+            width: 1200px;
+            height: 1200px;
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr;
-            background-color: pink;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+            background-color: lightblue;
             border: solid black;
             justify-content: center;
             align-content: center;
@@ -30,29 +31,24 @@
 
         .box {
           
-            background-color: lightblue;
-            text-align: center;
+            background-color: rgb(90, 165, 90);
             border: solid 2px black;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            
             
 
         }
         .big-box{
-            grid-column: span 3;
-        }
-        .big-row{
-            grid-column: span 2;
+            grid-column-start: 3;
+        }        .big-row{
+            grid-column-end: 3;
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <div class="box big-box">1</div>
-        <div class="box big-row">2</div>
+        <div class="box">1</div>
+        <div class="box">2</div>
         <div class="box">3</div>
         <div class="box">4</div>
         <div class="box">5</div>
@@ -60,6 +56,12 @@
         <div class="box">7</div>
         <div class="box">8</div>
         <div class="box">9</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        
+      
+        
     </div>
 </body>
 
