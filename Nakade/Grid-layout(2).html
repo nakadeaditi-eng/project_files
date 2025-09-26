@@ -26,25 +26,26 @@
 
         }
          .box-one{
-            grid-column: span 3;
+            grid-column-start: 2;
+  grid-column-end: 7;
+         }
+        .one{ 
+        col-span-2  
+        row-span-3
+        }
 
-        } 
-        /* short hand for span */
-       /* .box-one{
-            grid-column: 2/4;
-        } */
-        
+    
     </style>
 </head>
 <body>
     <div class="container">
         <!-- Row one -->
-        <div class="box row-span">1</div>
-        <div class="box ">2</div>
-        <div class="box">3</div>
+        <div class="box box-one">1</div>
+        <div class="box box-two">2</div>
+        <div class="box box-three">3</div>
         <div class="box">4</div>
         <div class="box">5</div>
-        <div class="box">6</div>
+        <div class="box box-one">6</div>
         <div class="box">7</div>
         <div class="box">8</div>
             <!-- Row two -->
