@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query Layout</title>
+    <style>
+        .container {
+  display: grid;
+  gap: 10px; /* Adjust spacing between items */
+  padding: 20px;
+  background-color: #f0f0f0; /* Light background for the container */
+}
+
+/* Default layout for larger screens */
+.container {
+  grid-template-columns: 1fr 1fr 1fr; /* Three columns */
+  grid-template-rows: auto auto auto; /* Auto rows */
+  grid-template-areas:
+    "item1 item1 item2"
+    "item3 item4 item2"
+    "item5 item6 item7"
+    "item5 item8 item8";
+}
+
+.item {
+  background-color: lightblue; /* Default item color, will be overridden */
+  border-radius: 5px;
+  min-height: 80px; /* Minimum height for items */
+}
+
+/* Specific styling for each item based on the image */
+.item-1 { grid-area: item1; background-color: #a7c5eb; }
+.item-2 { grid-area: item2; background-color: #f7a840; }
+.item-3 { grid-area: item3; background-color: #e0b0b8; }
+.item-4 { grid-area: item4; background-color: #b8e0e0; }
+.item-5 { grid-area: item5; background-color: #f5b09e; }
+.item-6 { grid-area: item6; background-color: #a0d468; } /* This appears to be the bottom-left item in the main grid */
+.item-7 { grid-area: item7; background-color: #a0d468; } /* This is the bottom-right item */
+.item-8 { grid-area: item8; background-color: #a0d468; } /* This is the bottom-right item */
+
+/* Adjusting the specific items based on the image's "palette" on the left */
+/* You would need to add separate divs for these or adjust the existing ones if they are part of the main grid */
+/* For simplicity, assuming these are separate elements or part of a different layout structure */
+
+/* Media Query for smaller screens (e.g., tablets and mobile) */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr 1fr; /* Two columns on smaller screens */
+    grid-template-areas:
+      "item1 item2"
+      "item3 item4"
+      "item5 item6"
+      "item7 item8"; /* Adjust grid areas for two columns */
+  }
+  .item-1 { grid-area: item1; }
+  .item-2 { grid-area: item2; }
+  .item-3 { grid-area: item3; }
+  .item-4 { grid-area: item4; }
+  .item-5 { grid-area: item5; }
+  .item-6 { grid-area: item6; }
+  .item-7 { grid-area: item7; }
+  .item-8 { grid-area: item8; }
+}
+
+@media (max-width: 480px) {
+  .container {
+    grid-template-columns: 1fr; /* Single column on very small screens */
+    grid-template-areas:
+      "item1"
+      "item2"
+      "item3"
+      "item4"
+      "item5"
+      "item6"
+      "item7"
+      "item8";
+  }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+  <div class="item item-1"></div>
+  <div class="item item-2"></div>
+  <div class="item item-3"></div>
+  <div class="item item-4"></div>
+  <div class="item item-5"></div>
+  <div class="item item-6"></div>
+  <div class="item item-7"></div>
+  <div class="item item-8"></div>
+</div>
+</body>
+</html>
