@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Grid layout</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 1200px;
+            height: 1200px;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(1, 1fr);
+            background-color: lightcoral;
+            border: solid 2px black;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .box {
+            background-color: aqua;
+            border: solid 2px black;
+        }
+
+        .box-one {
+            background-color: blue;
+        }
+    </style>
+    <script>
+        let x = 50;
+        console.log(x);
+        let y = prompt("Enter a number");
+        alert("The number you entered is " + y);
+        console.log(x+y);
+        console.log(x*y);
+        console.log(x/y);
+        console.log(x-y);
+        console.log(x%y);
+        console.log(x**y);
+        console.log(x++);
+        console.log(++x);
+        console.log(x--);
+        console.log(--x);
+        console.log(x+=y);
+        console.log(x-=y);
+        console.log(x*=y);
+        console.log(x/=y);
+        console.log(x%=y);
+        console.log(x**=y);
+        console.log(x==y);
+        console.log(x===y);
+        console.log(x!=y);
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box box-one"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>
