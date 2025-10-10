@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>message-sender</title>
+    <style>
+        .main-container{
+            width: 500px;
+            height: 500px;
+            background-color: white;
+            border: 2px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .container{
+            width: 90%;
+            height: 30%;
+            background-color: lightblue;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        .display-area{
+         width: 65%;
+         background-color: white;
+         border-radius: 10px;
+          overflow-y: auto;
+        }
+        .input-area{
+         width: 90%;
+         height: 50px;
+        }
+        .input-field{
+         width: 75%;
+         height: 70%;
+         background-color: aliceblue;
+         border: 5px;
+           border-radius: 10px;
+        }
+        .Click-button{
+            width: 85%;
+            height: 70%;
+            background-color: coral;
+            border-radius: 5px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+    <div class="container"></div>
+    <div class="display-area" id="display"></div>
+    <div class="inout-area"></div>
+     <div class="input-area"></div> 
+     <div class="input-field"></div>
+     <input type="text"  id="input" placeholder="Type a message...">
+     <button class="Click-button" onclick="showOutput()">Click</button>
+     </div>
+    </div>
+</div>
+     
+</body>
+
+
+     <script>
+        // function => block of code which does a specific task
+        function showOutput(){
+            let x = 5;
+            console.log(x);
+        }
+     </script>
+</body>
+</html>
