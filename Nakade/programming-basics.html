@@ -6,8 +6,8 @@
     <title>message-sender</title>
     <style>
         .main-container{
-            width: 500px;
-            height: 500px;
+            width: 800px;
+            height: auto;
             background-color: white;
             border: 2px;
             border-radius: 20px;
@@ -16,8 +16,8 @@
             gap: 15px;
         }
         .container{
-            width: 90%;
-            height: 30%;
+            width: 500px;
+            height: 500px;
             background-color: lightblue;
             border-radius: 10px;
             display: flex;
@@ -33,18 +33,18 @@
         }
         .input-area{
          width: 90%;
-         height: 50px;
+         height: auto;
         }
         .input-field{
-         width: 75%;
-         height: 70%;
+         width: 500px;
+         height: 500px;
          background-color: aliceblue;
          border: 5px;
            border-radius: 10px;
         }
         .Click-button{
             width: 85%;
-            height: 70%;
+            height: auto;
             background-color: coral;
             border-radius: 5px;
             
@@ -54,12 +54,15 @@
 <body>
     <div class="main-container">
     <div class="container"></div>
+    <div class="box"></div>
     <div class="display-area" id="display"></div>
     <div class="inout-area"></div>
      <div class="input-area"></div> 
      <div class="input-field"></div>
-     <input type="text"  id="input" placeholder="Type a message...">
+     <input type="text"  id="input" placeholder="Give an input...">
+     <input type="text"  id="input" placeholder="Give an input...">
      <button class="Click-button" onclick="showOutput()">Click</button>
+      <button class="Click-button" onclick="showInput()">Click</button>
      </div>
     </div>
 </div>
@@ -70,9 +73,28 @@
      <script>
         // function => block of code which does a specific task
         function showOutput(){
-            let x = 5;
-            console.log(x);
-        }
+            // Numbers
+let num1 = 10;
+let num2 = 5;
+
+
+// Addition
+
+console.log("x + y: ", sum);
+
+// Subtraction
+
+console.log("x - y: ", difference);
+
+// Multiplication
+
+console.log("x * y: ", product);
+
+// Division
+
+console.log("x / y: ", quotient);
+ }
+
      </script>
 </body>
 </html>
