@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My portfolio</title>
+  <style>
+    body {
+      background-color: #f0f8ff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header{
+        width: 100%;
+        height: 100px;
+        position: fixed;
+        background-color: aquamarine;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+     ul{
+        display: flex;
+        gap: 30px;
+        list-style: none;
+        font-size: 25px;
+     }
+     
+/* header css end--------------*/
+main {
+  width: 100%;
+  height: auto;
+}
+
+/* Home section css start ---------- */
+.home {
+  width: 100%;
+  height: 800px;
+  background-color: #33a1e0;
+}
+
+.home-content {
+  width: 50%;
+  height: 30%;
+  background-color: aqua;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.home,
+h1 {
+  padding: 0%;
+  margin: 0%;
+}
+
+/* Home section css end */
+
+/* about section css start */
+.about {
+  width: 100%;
+  height: 800px;
+  background-color: #1c6381;
+}
+
+.about-title {
+  width: 100%;
+  height: 10%;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.title-left {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* about section css end */
+
+/* project section css start */
+.project {
+  width: 100%;
+  height: 800px;
+  background-color: #2585bd;
+}
+
+.project-title {
+
+  width: 100%;
+  height: 10%;
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+}
+    
+
+    h1 {
+      text-align: center;
+      padding: 20px;
+      color: #333;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card {
+      width: 220px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      text-align: center;
+      padding: 20px;
+      color: white;
+      text-decoration: none;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    /* 🎨 Card Colors */
+    .html { background: linear-gradient(135deg, #ff7b00, #ffb347); }
+    .css { background: linear-gradient(135deg, #007bff, #00b4d8); }
+    .js { background: linear-gradient(135deg, #f7df1e, #f9a825); color: black; }
+    .projects { background: linear-gradient(135deg, #9d50bb, #6e48aa); }
+
+    /* 📂 File Sections */
+    .files {
+      display: none;
+      padding: 20px;
+      max-width: 700px;
+      margin: 30px auto;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .files h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    .file-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .file-list li {
+      padding: 10px;
+      background-color: #f2f2f2;
+      border-radius: 8px;
+      margin: 5px 0;
+    }
+
+    .file-list a {
+      text-decoration: none;
+      color: #007bff;
+      font-weight: bold;
+    }
+
+    .file-list a:hover {
+      text-decoration: underline;
+    }
+
+    .back {
+      display: block;
+      text-align: center;
+      margin-top: 15px;
+      text-decoration: none;
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+
+    .back:hover {
+      background-color: #0056b3;
+    }
+
+    /* 📘 CSS Target Trick */
+    #html:target, 
+    #css:target, 
+    #js:target, 
+    #projects:target {
+      display: block;
+    }
+
+    #html:target ~ .card-container,
+    #css:target ~ .card-container,
+    #js:target ~ .card-container,
+    #projects:target ~ .card-container {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1> Enjoy Programing</h1>
+
+  <!-- HTML Files Section -->
+  <div id="html" class="HTML">
+    <h2>📄 HTML </h2>
+    <ul class="file-list">
+      <li><a href="./Nakade/Nakade/calculator.html" >Calculator.html</a></li>
+      <li><a href="./Nakade/Nakade/Grid-layout(2).html">Grid Grid-layout.html</a></li>
+      <li><a href="./Nakade/Nakade/Grid-chess-board.html">Chessboard.html</a></li>
+      <li><a href="./Nakade/Nakade/product-card.html">Product Card.html</a></li>
+      <li><a href="./Nakade/Nakade/division-layout-four.html">Division-layout-four.html</a></li>
+      <li><a href="./Nakade/Nakade/Grid-one.html">Grid one layout.html</a></li>
+      l,<i><a href="./chess-board-styling css.html">Chess-board-styling.html</a></i>
+      <li><a href="./assets (1).html">Assets.html</a></li>
+      <li><a href="./background-image.html">Background image.html</a></li>
+      <li><a href="./background-image (2).html">Background image.html</a></li>
+      <li><a href="./chess-.html">chess-.html</a></li>
+      <li><a href="./form.html">form.html</a></li>
+      <li><a href="./Admission submited.html">Form Admission-submitted.html</a></li>
+      <li><a href="./Admission-form - Personal details.html">Admission-form - personal details.html</a></li>
+      <li><a href="./College-Admission-Form - Academic and Course Details.html">Academic and course details.html</a></li>
+      <li><a href="/College-Admission-Form - Contact Details.html">Contact details.html</a></li>
+      <li><a href="./chess-board.html">chess-board.html</a></li>
+      <li><a href="./display-properties example.html">Display properties example.html</a></li>
+      <li><a href="./table-with-internal-css.html">Table layout.html</a></li>
+      
+    </ul>
+    <a href="#" class="back">⬅ Back</a>
+  </div>
+
+  <!-- CSS Files Section -->
+  <div id="css" class="files">
+    <h2>🎨 CSS Files</h2>
+    <ul class="file-list">
+      <li><a href="./Nakade/portfolio.css" target="portfolio">portfolio.css</a></li>
+      <li><a href="./Nakade/portfolio.css" target="portfolio">portfolio.css</a></li>
+    </ul>
+    <a href="#" class="back">⬅ Back</a>
+  </div>
+
+  <!-- JS Files Section -->
+  <div id="js" class="files">
+    <h2>⚡ JavaScript Files</h2>
+    <ul class="file-list">
+      <li><a href="script.js" target="_blank">script.js</a></li>
+      <li><a href="form-validation.js" target="_blank">form-validation.js</a></li>
+    </ul>
+    <a href="#" class="back">⬅ Back</a>
+  </div>
+
+  <!-- Projects Section -->
+  <div id="projects" class="files">
+    <h2>🚀 Projects</h2>
+    <ul class="file-list">
+      <li><a href="./Admission-form - Personal details.html" target="Form">Admission-form - personal Details.html</a></li>
+      <li><a href="./College-Admission-Form - Academic and Course Details.html" target="Admission-Form - Academic and Course Details">Admission-Form - Academic and Course Details.html</a></li>
+      <li><a href="./College-Admission-Form - Contact Details.html" target="Admission-Form - Contact Details">Admission-Form - Contact Details.html</a></li>
+      <li><a href="./Admission submited.html" target="Admission-submitted">Admission submited.html</a></li>
+    </ul>
+    <a href="#" class="back">⬅ Back</a>
+  </div>
+
+  <!-- Main Cards -->
+  <div class="card-container">
+    <a href="#html" class="card html"><h2>HTML Files</h2></a>
+    <a href="#css" class="card css"><h2>CSS Files</h2></a>
+    <a href="#js" class="card js"><h2>JavaScript Files</h2></a>
+    <a href="#projects" class="card projects"><h2>Projects</h2></a>
+  </div>
+
+</body>
+</html>
