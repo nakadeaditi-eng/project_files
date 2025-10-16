@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admission Form</title>
+  <style>
+    body {
+      width: 900px;
+      background-color: lightcoral;
+      font-family: Arial;
+      padding: 20px;
+    }
+    fieldset {
+      width: 800px;
+      background-color: lightgreen;
+      border-radius: 10px;
+      padding: 20px;
+    }
+    legend {
+      background-color: red;
+      color: white;
+      padding: 5px 15px;
+      border-radius: 5px;
+    }
+    #output {
+      margin-top: 20px;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <fieldset>
+    <legend>Admission Form</legend>
+    <form id="admissionForm">
+      <label>Enter your name:</label><input type="text" id="fname"><br><br>
+      <label>Enter your Middle Name:</label><input type="text" id="mname"><br><br>
+      <label>Enter your Last Name:</label><input type="text" id="lname"><br><br>
+      <label>Enter your Address:</label><br>
+      <textarea id="address"></textarea><br><br>
+      <label>Enter your City:</label><input type="text" id="city"><br><br>
+      <label>Enter your Pincode:</label><input type="text" id="pincode"><br><br>
+      <label>Enter your State:</label>
+      <select id="state">
+        <option>Arunachal Pradesh</option>
+        <option>Assam</option>
+        <option>Maharashtra</option>
+        <option>Andhra Pradesh</option>
+        <option>Chhattisgarh</option>
+       
+      </select><br><br>
+      <label>Enter your Country:</label>
+      <select id="country">
+        <option>India 🇮🇳</option>
+        <option>France 🇫🇷</option>
+        <option>Australia 🇦🇺</option>
+        <option>Japan 🇯🇵</option>
+      </select><br><br>
+      <label>Enter your Hobbies:</label>
+      <select id="hobby">
+        <option>Reading 📖</option>
+        <option>Drawing 🎨</option>
+        <option>Playing ⛹️</option>
+        <option>Watching Mobile 📱</option>
+        <option>Writing ✍🏻</option>
+      </select><br><br>
+      <label>Enter your Number:</label><input type="text" id="number"><br><br>
+      <label>Enter your Email:</label><input type="email" id="email"><br><br>
+      <label>Nationality:</label><input type="text" id="nationality"><br><br>
+      <label>Password:</label><input type="password" id="password"><br><br>
+      <label>Date of Birth:</label><input type="date" id="dob"><br><br>
+      <input type="submit" value="Submit Form">
+      <input type="reset" value="Reset">
+    </form>
+  </fieldset>
+
+  <div id="output"></div>
+
+  <script>
+    document.getElementById("admissionForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+
+      let firstname = document.getElementById("firstname").value;
+      let middlename = document.getElementById("middlename").value;
+      let lastname = document.getElementById("lastname").value;
+      let address = document.getElementById("address").value;
+      let city = document.getElementById("city").value;
+      let pincode = document.getElementById("pincode").value;
+      let state = document.getElementById("state").value;
+      let country = document.getElementById("country").value;
+      let hobby = document.getElementById("hobby").value;
+      let number = document.getElementById("number").value;
+      let email = document.getElementById("email").value;
+      let nationality = document.getElementById("nationality").value;
+      let password = document.getElementById("password").value;
+      let dob = document.getElementById("dob").value;
+    
+
+
+
+
+
+
+
+      // Display output
+      let outputText = 
+        "<h3>Submitted Details:</h3>" +
+        "<p><b>Name:</b> " + firstname + " " + middlename + " " + lastname + "</p>" +
+        "<p><b>Address:</b> " + address + "</p>" +
+        "<p><b>City:</b> " + city + "</p>" +
+        "<p><b>Pincode:</b> " + pincode + "</p>" +
+        "<p><b>State:</b> " + state + "</p>" +
+        "<p><b>Country:</b> " + country + "</p>" +
+        "<p><b>Hobby:</b> " + hobby + "</p>" +
+        "<p><b>Number:</b> " + number + "</p>" +
+        "<p><b>Email:</b> " + email + "</p>" +
+        "<p><b>Nationality:</b> " + nationality + "</p>" +
+        "<p><b>Password:</b> " + password + "</p>" +
+        "<p><b>Date of Birth:</b> " + dob + "</p>";
+
+      document.getElementById("output").innerHTML = outputText;
+    });
+  </script>
+</body>
+</html>
