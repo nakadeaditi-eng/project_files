@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,18 +12,21 @@
       font-family: Arial;
       padding: 20px;
     }
+
     fieldset {
       width: 800px;
       background-color: lightgreen;
       border-radius: 10px;
       padding: 20px;
     }
+
     legend {
       background-color: red;
       color: white;
       padding: 5px 15px;
       border-radius: 5px;
     }
+
     #output {
       margin-top: 20px;
       background-color: white;
@@ -31,6 +35,7 @@
     }
   </style>
 </head>
+
 <body>
   <fieldset>
     <legend>Admission Form</legend>
@@ -49,15 +54,15 @@
         <option>Maharashtra</option>
         <option>Andhra Pradesh</option>
         <option>Chhattisgarh</option>
-       
+
       </select><br><br>
       <label>Enter your Country:</label>
-      <select id="country">
-        <option>India 🇮🇳</option>
-        <option>France 🇫🇷</option>
-        <option>Australia 🇦🇺</option>
-        <option>Japan 🇯🇵</option>
-      </select><br><br>
+<select id="country">
+  <option>India</option>
+  <option>France</option>
+  <option>Australia</option>
+  <option>Japan</option>
+</select> <br><br>
       <label>Enter your Hobbies:</label>
       <select id="hobby">
         <option>Reading 📖</option>
@@ -79,13 +84,13 @@
   <div id="output"></div>
 
   <script>
-    document.getElementById("admissionForm").addEventListener("submit", function(event) {
+    document.getElementById("admissionForm").addEventListener("submit", function (event) {
       event.preventDefault();
 
 
-      let firstname = document.getElementById("firstname").value;
-      let middlename = document.getElementById("middlename").value;
-      let lastname = document.getElementById("lastname").value;
+      let firstname = document.getElementById("fname").value;
+      let middlename = document.getElementById("mname").value;
+      let lastname = document.getElementById("lname").value;
       let address = document.getElementById("address").value;
       let city = document.getElementById("city").value;
       let pincode = document.getElementById("pincode").value;
@@ -97,7 +102,7 @@
       let nationality = document.getElementById("nationality").value;
       let password = document.getElementById("password").value;
       let dob = document.getElementById("dob").value;
-    
+
 
 
 
@@ -106,9 +111,9 @@
 
 
       // Display output
-      let outputText = 
+      let outputText =
         "<h3>Submitted Details:</h3>" +
-        "<p><b>Name:</b> " + firstname + " " + middlename + " " + lastname + "</p>" +
+        "<p><b>Name:</b> " + fname + " " + mname + " " + lname + "</p>" +
         "<p><b>Address:</b> " + address + "</p>" +
         "<p><b>City:</b> " + city + "</p>" +
         "<p><b>Pincode:</b> " + pincode + "</p>" +
@@ -125,4 +130,5 @@
     });
   </script>
 </body>
+
 </html>
