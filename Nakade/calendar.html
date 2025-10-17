@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal Calendar</title>
+    <style>
+        body{
+            background-color: lightgreen;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 100px;
+        }
+        h2{
+            color: black;
+        }
+        button{
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            background-color: red;
+            color: white;
+            cursor: pointer;
+        }
+        
+        #welcome{
+            font-size: 22px;
+            color:brown;
+            margin-top: 30px;
+        }
+        #today{
+            font-size: 20px;
+            color:deeppink;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Universal Calendar</h2>
+
+    <div>
+        <button onclick="showDay()" style="background-color:mediumseagreen">Sunday</button>
+        <button onclick="showDay()" style="background-color: lightpink;">Monday</button>
+        <button onclick="showDay()" style="background-color: goldenrod;">Tuesday</button>
+        <button onclick="showDay()" style="background-color: crimson;">Wednesday</button>
+        <button onclick="showDay()" style="background-color: coral;">Thursday</button>
+        <button onclick="showDay()" style="background-color: gray;">Friday</button>
+        <button onclick="showDay()" style="background-color: green;">Saturday</button>
+    </div>
+
+    <div id="welcome">Welcome to Universal Calendar.</div>
+    <div id="today">Today is Sunday.</div>
+
+    <script>
+        function showDay(){
+            let dayName = event.target.innerText;
+            document.getElementById("today").innerHTML = "Today is " + dayName + ".";
+        }
+    </script>
+</body>
+</html>
