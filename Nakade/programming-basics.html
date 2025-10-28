@@ -1,93 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>messenger</title>
-    <style>
-        .main-container{
-            width: 800px;
-            height: auto;
-            background-color: white;
-            border: 2px;
-            border-radius: 20px;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-        .container{
-            width: 500px;
-            height: 500px;
-            
-            border-radius: 10px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            gap: 10px;
-        }
-        .display-area{
-         width: 65%;
-         background-color: white;
-         border-radius: 10px;
-          overflow-y: auto;
-        }
-        .input-area{
-         width: 90%;
-         height: auto;
-        }
-        .input-field{
-         width: 500px;
-         height: 500px;
-         background-color: aliceblue;
-         border: 5px;
-           border-radius: 10px;
-        }
-        .Click-button{
-            width: 85%;
-            height: auto;
-            background-color: coral;
-            border-radius: 5px;
-            
-        }
-        #output{
-             margin-top: 20px;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Messenger</title>
+  <style>
+    body {
+      background-color: aliceblue;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      padding-top: 50px;
+    }
+    .main-container {
+      width: 800px;
       background-color: white;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 0 10px gray;
+    }
+    .display-area {
+      background-color: #f9f9f9;
       padding: 20px;
       border-radius: 10px;
-        }
-    </style>
+      margin-bottom: 20px;
+      min-height: 50px;
+    }
+    .input-area {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+    input {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid gray;
+      width: 200px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: coral;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-    <div class="main-container">
-    <div class="container"></div>
-    <div class="box"></div>
-    <div class="display-area" id="display" plasehplder="Give an output...">
-    <div class="input-area"></div>
-     <div class="input-area"></div> 
-     <div class="input-field"></div>
-     <input type="text"  id="input" placeholder="Give an input...">
-     <input type="text"  id="input" placeholder="Give an input...">
-     <button class="Click-button" onclick="">Click</button>
-      <button class="Click-button" onclick="">Click</button>
-     </div>
+  <div class="main-container">
+    <h2>Messenger Output Example</h2>
+
+    <div id="display" class="display-area">Output will appear in display...</div>
+
+    <div class="input-area">
+      <input type="text" id="input-one" placeholder="Enter first number" />
+      <input type="text" id="input-two" placeholder="Enter second number" />
+      <button onclick="displayOutput()">Click</button>
     </div>
-</div>
-     </div>
-</body>
+  </div>
 
+  <script>
+    function displayOutput() {
+      let name = Number(document.getElementById("input-one").value);
+      let lastname = Number(document.getElementById("input-two").value);
+      let y = name ** lastname;
 
-     <script>
-        // function => block of code which does a specific task
-        function displayOutput(){
-            let name = document.getElementById("input-one").value;
-            let lastname = document.getElementById("input-two").value;
-            let y = name ** lastname;
-
-            //output
-            document.getElementById("display").innerHTML = "The answer is : " + y;
-
-        }
-
-     </script>
+      document.getElementById("display").innerHTML = "The answer is: " + y;
+    }
+  </script>
 </body>
 </html>

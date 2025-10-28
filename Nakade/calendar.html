@@ -41,21 +41,21 @@
     <h2>Universal Calendar</h2>
 
     <div>
-        <button onclick="showDay()" style="background-color:mediumseagreen">Sunday</button>
-        <button onclick="showDay()" style="background-color: lightpink;">Monday</button>
-        <button onclick="showDay()" style="background-color: goldenrod;">Tuesday</button>
-        <button onclick="showDay()" style="background-color: crimson;">Wednesday</button>
-        <button onclick="showDay()" style="background-color: coral;">Thursday</button>
-        <button onclick="showDay()" style="background-color: gray;">Friday</button>
-        <button onclick="showDay()" style="background-color: green;">Saturday</button>
+        <button onclick="showDay(this)" style="background-color:mediumseagreen">Sunday</button>
+        <button onclick="showDay(this)" style="background-color: lightpink;">Monday</button>
+        <button onclick="showDay(this)" style="background-color: goldenrod;">Tuesday</button>
+        <button onclick="showDay(this)" style="background-color: crimson;">Wednesday</button>
+        <button onclick="showDay(this)" style="background-color: coral;">Thursday</button>
+        <button onclick="showDay(this)" style="background-color: gray;">Friday</button>
+        <button onclick="showDay(this)" style="background-color: green;">Saturday</button>
     </div>
 
     <div id="welcome">Welcome to Universal Calendar.</div>
     <div id="today">Today is Sunday.</div>
 
     <script>
-        function showDay(){
-            let dayName = event.target.innerText;
+        function showDay(button){
+            let dayName = button.innerText;
             document.getElementById("today").innerHTML = "Today is " + dayName + ".";
         }
     </script>
