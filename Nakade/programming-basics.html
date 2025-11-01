@@ -31,7 +31,7 @@
       gap: 10px;
       justify-content: center;
     }
-    input {
+    input {       
       padding: 10px;
       border-radius: 5px;
       border: 1px solid gray;
@@ -49,25 +49,26 @@
 </head>
 <body>
   <div class="main-container">
+      <div class="container"></div>
     <h2>Messenger Output Example</h2>
 
     <div id="display" class="display-area">Output will appear in display...</div>
 
     <div class="input-area">
-      <input type="text" id="input-one" placeholder="Enter first number" />
-      <input type="text" id="input-two" placeholder="Enter second number" />
-      <button onclick="displayOutput()">Click</button>
+      <input type="text" id="input-one" placeholder="Enter character" />
+      <input type="text" id="input-two" placeholder="Enter number" />
+      <button id="mon"  onclick="displayOutput()">Click</button>
     </div>
   </div>
-
+</body>
   <script>
     function displayOutput() {
-      let name = Number(document.getElementById("input-one").value);
-      let lastname = Number(document.getElementById("input-two").value);
-      let y = name ** lastname;
+      let y = Number(document.getElementById("input-field").value);
+      let z = Number(document.getElementById("input-field2").value);
+      
 
-      document.getElementById("display").innerHTML = "The answer is: " + y;
+      document.getElementById("display").innerHTML = y % z + typeof z;
     }
   </script>
-</body>
+
 </html>
