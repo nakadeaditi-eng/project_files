@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bio Data</title>
+</head>
+<body>
+    <p id="name"></p>
+    <p id="age"></p>
+    <p id="class"></p>
+    <p id="school"></p>
+    <p id="phone"></p>
+    <p id="skills"></p>
+    <p id="hobbies"></p>
+    <p id="gender"></p>
+    <p id="address"></p>
+    <p id="email"></p>
+    <p id="photo"></p>  <!-- Image ke liye -->
+
+    <script>
+        let name = "Aditi";
+        let age = "18";
+        let classs = "First year";
+        let school = "SBJIT";
+        let phone = "9168225231";
+        let skills = "Coder, Developer";
+        let hobbies = "Writing, Watching mobile";
+        let gender = "Female";
+        let address = "At Rathi Layout, Katol";
+        let email = "nakadeaditi@gmail.com";
+        let photo = "https://via.placeholder.com/150"; // yahan apni image ka link daalo
+
+        document.getElementById("name").innerHTML = "Your name is: <b>" + name + "</b>"; 
+        document.getElementById("age").innerHTML = "Age: <b>" + age + "</b>";
+        document.getElementById("class").innerHTML = "Class: <b>" + classs + "</b>";
+        document.getElementById("school").innerHTML = "School: <b>" + school + "</b>";
+        document.getElementById("phone").innerHTML = "Phone No: <b>" + phone + "</b>";
+        document.getElementById("skills").innerHTML = "Skills: <b>" + skills + "</b>";
+        document.getElementById("hobbies").innerHTML = "Hobbies: <b>" + hobbies + "</b>";
+        document.getElementById("gender").innerHTML = "Gender: <b>" + gender + "</b>";
+        document.getElementById("address").innerHTML = "Address: <b>" + address + "</b>";
+        document.getElementById("email").innerHTML = "Email-ID: <b>" + email + "</b>";
+
+        // Image display karne ke liye
+        document.getElementById("photo").innerHTML = "Photo:<br><img src='" + photo + "' width='150' height='150'>";
+    </script>
+</body>
+</html>
