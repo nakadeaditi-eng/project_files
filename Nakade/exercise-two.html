@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal calendar</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            font-size: 30px;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .container-one {
+            width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 30px;
+        }
+
+        .container-two {
+            width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            align-content: space-evenly;
+        }
+
+        button {
+            width: 200px;
+            height: 150px;
+            background-color: aquamarine;
+            font-size: 20px;
+            border-radius: 20px;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-one" id="container-one">
+            <p>Welcome to universal calendar </p>
+            <p id="display"></p>
+        </div>
+        <div class="container-two" id="container-two">
+            <button id="Sunday" onclick="Sunday">Sunday</button>
+            <button id="Monady" onclick="Monday">Monday</button>
+            <button id="Tuesday" onclick="Tuesday">Tuesday</button>
+            <button id="Wednesday" onclick="Wednesday">Wednesday</button>
+            <button id="Thursday" onclick="Thursday">Thursday</button>
+            <button id="Friday" onclick="Friday">Friday</button>
+            <button id="Saturday" onclick="Saturday">Saturday</button>
+        </div>
+    </div>
+</body>
+
+<script>
+    function Sunday {
+        document.getElementById("container-one").innerHTML = "Today is" + "Sunady" .style.backgroundColor = "#658C58" 
+    }
+    
+</script>
+</html>
