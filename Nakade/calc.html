@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 350px;
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 25px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .display-area {
+            background: #222;
+            color: #fff;
+            height: 70px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 15px;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .button-group {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+
+        button {
+            padding: 15px;
+            font-size: 20px;
+            border-radius: 10px;
+            border: none;
+            background: black;
+            color: white;
+                   }
+
+           </style>
+</head>
+
+<body>
+    <div class="container">
+        
+        <div id="display" class="display-area"></div>
+
+        <div class="button-group">
+            <button onclick="clickNumber(1)">1</button>
+            <button onclick="clickNumber(2)">2</button>
+            <button onclick="clickNumber(3)">3</button>
+            <button onclick="clickNumber(4)">4</button>
+        </div>
+
+    </div>
+
+    <script>
+        function clickNumber(num) {
+            document.getElementById("display").innerText += num;
+        }
+    </script>
+</body>
+</html>
