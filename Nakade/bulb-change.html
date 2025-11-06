@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bulb change on click</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .container {
+            width: 30%;
+            height: 50%;
+            box-shadow: 5px 5px 50px 3px rgb(188 188 188);
+        }
+        .bulb-image {
+width: 90%;
+height: 70%;
+justify-content: center;
+align-items: center;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        .btn-group {
+            width: 90%;
+            height: 30%;
+            background-color: antiquewhite;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .button {
+            width: 150px;
+            height: 50px;
+            border-radius: 10px;
+            border: none;
+            font-size: 20px;
+        }
+           button:hover {
+            background-color: green;
+           }
+             
+    </style>
+</head>
+<body>
+   <div class="container">
+    <div class="bulb-image">
+        <img src="https://rukminim2.flixcart.com/image/1200/1200/xif0q/bulb/y/6/w/2-50w-e27-white-acebright-new-led-bulb-pack-of-02-philips-original-imagszj9vntw3zjc.jpeg" alt="" id="image">
+    </div>
+    <div class="btn-group">
+        <button onclick="redBulb()">red-bulb</button>
+        <button onclick="greenBulb()">green-bulb</button>
+        <button onclick="blueBulb()">blue-bulb</button>
+    </div>
+   </div> 
+   <script>
+    function redBulb(){
+        document.getElementById("image").src= "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTbkZ2cbcOd7DEcPisKjB-Zu94N8uUnRkKjFWVyHcQvrnL46VWq94wtlTHh7X46gNVuQZWdP_b1K8j53t9QlB3h5L5umPSNt1gsdFmDEtmJOZ-l3Vf2vaIfmPw"
+    }
+    function greenBulb(){
+        document.getElementById("image").src ="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTshoGS1B8sZbO4jb-WHJP_FZo9cW8Z43a2TiYZviIVpx7kZGdOS51X3ntQi9qhviHuSOWXg1OXg81vP83oA2ZjVp_BYN8Og38Xt-3cLOzVysOCE5aJorRgJw"
+    }
+    function blueBulb(){
+        document.getElementById("image").src ="https://rukminim2.flixcart.com/image/1200/1200/k6wiefk0/bulb/g/q/x/joy-visiopn-deco-philips-original-imafp8v7pzgpfy4k.jpeg"
+    }
+   </script>
+</body>
+</html>
