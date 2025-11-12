@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+             display: flex;
+            justify-content: center;
+            align-items: center;
+        
+        }
+ 
+        .atmbox {
+            height: 95vh;
+            width:95vw;
+            background-color:rgb(211, 229, 239);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+            box-shadow: 1px 1px 1px rgb(226, 220, 220);
+            margin-top: 30px;
+            
+        }
+ 
+        .display-box {
+            height: 20%;
+            width: 80%;
+            background-color: white;
+            box-shadow: 1px 2px 1px rgb(91, 89, 89);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+ 
+        }
+        .atmcontainer{
+            height: 40%;
+            width: 80%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            gap: 20px;
+           
+ 
+           
+        }
+        .left-atmcontainer{
+            height: 95%;
+            width: 50%;
+            background-color: white;
+            display: flex;
+            justify-content:flex-start;
+            align-items:start;
+            text-align:start;
+            gap: 10px;
+            box-shadow: 2px 2px 2px gray;
+           
+        }
+        .right-atmcontainer{
+            height: 95%;
+            width: 50%;
+            background-color:white;
+            display: flex;
+            justify-content:flex-start;
+            align-items:start;
+            text-align: start;
+            gap: 10px;
+            box-shadow: 2px 2px 2px gray;
+ 
+        }
+ 
+        .deposite {
+            height: 20%;
+            width: 100%;
+            background-color: green;
+            color: white;
+           
+           }
+
+           .button-one{
+            height: 80%;
+            width: 90%;
+            background-color: green;
+            margin-top: 30px;
+            color: white;
+            font-size: 20px;
+            margin-left: 10px;
+            
+        }
+        p{
+            margin-top: 10px;
+            color: black;
+            font-size: 40px;
+            margin-top: 20px;
+        }
+        .p-tag{
+        margin-top: 10px;
+        margin-left: 20px;
+        }
+        input{
+            height: 50%;
+            width: 90%;
+            margin-left: 20px;
+ 
+        }
+        
+        h2{
+            margin-bottom: 40px;
+            font-size: 30px;
+        }
+        .withdraw{
+            height: 20%;
+            width: 100%;
+              background-color:red;
+              color: white;
+              
+        }
+        .button-two{
+            height: 80%;
+            width: 90%;
+            background-color:red;
+            margin-top: 30px;
+            color: white;
+            font-size: 20px;
+            margin-left: 10px;
+           
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment-two</title>
+</head>
+ 
+<body>
+    <div class="atmbox">
+ 
+        <h1>Bank Transaction System</h1>
+        <div class="display-box">
+            <p>Current Balance</p>
+            <p id="display-output"></p>
+        </div>
+        <div class="atmcontainer">
+            <div class="left-atmcontainer">
+                <div class="deposite">
+                    <h2 class="deposite">Deposite</h2>
+                    <p class="p-tag">Amount</p>
+                    <input type="number" id="input-one">
+                    <button class="button-one" onclick="deposite()">Deposite</button>
+                </div>
+            </div>
+            <div class="right-atmcontainer">
+                 <div class="withdraw">
+                    <h2  class="withdraw">Withdraw</h2>
+                    <p class="p-tag">Amount</p>
+                    <input type="number" id="input-two">
+                    <button class="button-two" onclick="withdraw()">Withdraw</button>
+                 </div>
+ 
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let balance = 5000 ;
+    depositeAmount = 0;
+    withdrawAmount = 0;
+    document.getElementById("display-output").innerHTML = balance;
+ 
+    function withdraw() {
+        withdrawAmount = document.getElementById("input-two").value;
+        balance = balance - Number(withdrawAmount);
+        document.getElementById("display-output").innerHTML = balance;
+        document.getElementById("input-two").value = "";
+        alert("withdraw successfull")
+       
+    }
+    function deposite() {
+         depositeAmount = document.getElementById("input-one").value;
+        balance = balance + Number(depositeAmount);
+        document.getElementById("display-output").innerHTML = balance;
+        document.getElementById("input-one").value = "";
+        alert("deposite successfull")
+ 
+    }
+</script>
+ 
+</html>
+ 
