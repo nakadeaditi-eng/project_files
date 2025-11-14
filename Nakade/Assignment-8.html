@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        /* declaration */
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* tag selectors */
+        .main-container {
+            height: 80vh;
+            width: 50vw;
+            background-color:white;
+            display: flex;
+            justify-content: flex-start;
+            align-items:center;
+            text-align: center;
+            flex-direction: column;
+            
+        }
+        .container{
+            height: 70%;
+            width: 90%;
+            background-color:white;
+            display: flex;
+            justify-content:flex-start;
+            align-items:start;
+            flex-direction: column;
+            border-radius: 10px;
+            gap: 10px;
+        }
+
+        label {
+            font-size: 24px;
+        }
+
+        input {
+            height: 8%;
+            width: 100%;
+            background-color: white;
+
+
+        }
+
+       
+
+        .button-group-1 {
+            height: 20%;
+            width: 100%;
+            background-color:white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            
+        }
+        .button-group-2{
+            height: 20%;
+            width: 100%;
+            background-color:white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            
+        }
+
+
+        button {
+            height: 60%;
+            width: 90%;
+        background-color: rgba(31, 223, 31, 0.773);
+        }
+        .output{
+            height: 6%;
+            width: 20%;
+            background-color:white;
+            font-size: 24px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercise-3</title>
+</head>
+
+<body>
+    <!-- bidy structure -->
+    <div class="main-container">
+       
+        <h1>Math Operation Calculator</h1>
+          <p id="output" class="output"></p>
+        <div class="container">
+        <label>First Number:</label>
+        <input type="number" id="input-one" placeholder="Enter first number...">
+        <label>Second Number:</label>
+        <input type="number" id="input-two" placeholder="Enter second number...">
+        <div class="button-group-1">
+            <button onclick="add()">Add(+)</button>
+            <button onclick="subtract()">Subtract(-)</button>
+
+        </div>
+        <div class="button-group-2">
+                        <button onclick="multiply()">Multiply(*)</button>
+            <button onclick="divide()">Divide(+)</button>
+        </div>
+        </div>
+       
+    </div>
+    <!-- script tag-->
+     <script>
+        function add(){
+            //input
+            let a = Number( document.getElementById("input-one").value);
+            let b = Number(document.getElementById("input-two").value);
+            //process
+            c = a + b ;
+            //output
+            document.getElementById("output").innerHTML = c ; 
+
+        }
+        function subtract(){
+            //input
+            let a = Number(document.getElementById("input-one").value);
+            let b = Number(document.getElementById("input-two").value);
+            //process
+            c = a - b;
+            //output
+            document.getElementById("output").innerHTML = c;
+        }
+        function multiply(){
+            //input
+            let a = Number(document.getElementById("input-one").value);
+            let b = Number(document.getElementById("input-two").value);
+            //process
+            c = a * b;
+            //output
+            document.getElementById("output").innerHTML = c;
+        }
+        function divide(){
+            //input
+            let a = Number(document.getElementById("input-one").value);
+            let b = Number(document.getElementById("input-two").value);
+            //process
+            c = a / b;
+            //output
+            document.getElementById("output").innerHTML = c;
+        }
+        
+     </script>
+</body>
+
+</html>
