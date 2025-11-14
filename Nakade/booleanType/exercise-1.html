@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String example</title>
+</head>
+<body>
+    <h1 id="display">String exercise</h1>
+
+    <!-- Result yahan show hoga -->
+    <p id="result"></p>
+
+    <button onclick="showMessage()">Click me</button>
+
+    <script>
+        let string1 = prompt("Enter a string1");
+        let string2 = prompt("Enter a string2");
+
+        let c = string1 + string2;
+
+        // HTML mein dikhane ke liye
+        document.getElementById("result").innerHTML = "Result: " + c;
+
+        function showMessage() {
+            document.getElementById('display').innerHTML = 'hello';
+        }
+    </script>
+</body>
+</html>
