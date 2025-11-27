@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Checker</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial;
+            background: linear-gradient(135deg, #89f7fe, #66a6ff);
+        }
+
+        .box{
+            width: 350px;
+            padding: 25px;
+            border-radius: 12px;
+            background: white;
+            box-shadow: 0px 5px 40px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        h2{
+            margin: 0;
+            padding: 10px 0;
+            color: #444;
+            border-bottom: 2px solid lightgray;
+        }
+
+        input{
+            width: 90%;
+            height: 40px;
+            margin-top: 20px;
+            padding-left: 15px;
+            font-size: 17px;
+            border-radius: 5px;
+            border: 1px solid #999;
+            background: #f3f9ff;
+        }
+
+        button{
+            margin-top: 20px;
+            width: 95%;
+            height: 42px;
+            background-color: #ffb347;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        button:hover{
+            background-color: #ff9800;
+        }
+
+        #result{
+            margin-top: 20px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="box">
+        <h2>Temperature Checker</h2>
+
+        <input type="number" id="temp" placeholder="Enter temperature in °C">
+
+        <button onclick="check()">Check Now</button>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function check() {
+            let t = document.getElementById("temp").value;
+
+            if(t === ""){
+                document.getElementById("result").innerHTML = "Please enter a temperature!";
+                return;
+            }
+
+            if(t <= 30){
+                document.getElementById("result").innerHTML = "It's Cool!";
+            } else {
+                document.getElementById("result").innerHTML = "It's Hot!";
+            }
+        }
+    </script>
+
+</body>
+</html>

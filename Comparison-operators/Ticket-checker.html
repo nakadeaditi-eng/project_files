@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket checker</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f7f7f7;
+        }
+        .container{
+            width: 40%;
+            height: 40%;
+            box-shadow: 5px 5px 50px 2px lightblue;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            border-radius: 10px;
+            background-color: white;
+        }
+        .heading{
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+            background-color: lightcoral;
+            width: 80%;
+            text-align: center;
+            padding: 10px;
+        }
+        .input-group{
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        input{
+            height: 40px;
+            padding-left: 20px;
+            background-color: aliceblue;
+            border-radius: 5px;
+            border: 1px solid #aaa;
+        }
+        button{
+            width: 80%;
+            height: 40px;
+            background-color: lightgreen;
+            border: none;
+            border-radius: 7px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        #result{
+            font-size: 22px;
+            font-weight: bold;
+            color: darkblue;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="heading">Ticket Checker</div>
+
+        <div class="input-group">
+            <label>Enter your age:</label>
+            <input type="number" id="input-age" placeholder="Enter age here">
+        </div>
+
+        <button onclick="getTicket()">Submit</button>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function getTicket(){
+            let age = document.getElementById("input-age").value;
+
+            if(age === ""){
+                document.getElementById("result").innerHTML = "Please enter age!";
+                return;
+            }
+
+            if(age > 12){
+                document.getElementById("result").innerHTML = "Adult Ticket";
+            } else {
+                document.getElementById("result").innerHTML = "Child Ticket";
+            }
+        }
+    </script>
+
+</body>
+</html>
