@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Example four</title>
+</head>
+
+<body>
+    <h1 id="display"></h1>
+    <button onclick="increment()">Click Me</button>
+    <button onclick="decrement()">Click Me</button>
+    <script>
+        let count = 0
+        document.getElementById("display").innerHTML = count;
+        function increment() {
+            //count = count + 10;
+            count++;
+            document.getElementById("display").innerHTML = count;
+        }
+       
+        function decrement(){
+            //count = count - 1;
+            count--;
+            document.getElementById("dispaly").innerHTML = count;
+        }
+    </script>
+</body>
+
+</html>
