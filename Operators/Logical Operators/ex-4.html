@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical operator example 4</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #43cea2, #185a9d);
+        }
+
+        .box {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+
+        label {
+            font-size: 20px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background: #185a9d;
+            color: white;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #0f3f6d;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <input type="checkbox" id="checkbox">
+        <label>Is a member</label> 
+        <br>
+        <button onclick="check()">Submit</button>
+    </div>
+
+    <script>
+        function check(){
+            let value = document.getElementById("checkbox").checked;
+            alert(value);
+
+            if (value == true) {
+                alert("Yes, you are a member!");
+            }
+            else {
+                alert("You are NOT a member!");
+            }
+        }
+    </script>
+
+</body>
+</html>

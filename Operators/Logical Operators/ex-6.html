@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #4e54c8, #8f94fb);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .box {
+            background: white;
+            padding: 40px;
+            width: 350px;
+            border-radius: 15px;
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        input[type="number"] {
+            width: 90%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #aaa;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-size: 18px;
+            font-weight: bold;
+            margin-left: 6px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            font-size: 17px;
+            border: none;
+            border-radius: 8px;
+            background: #4e54c8;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background: #3439a3;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <input type="number" id="cart-value" placeholder="Enter cart value">
+        <br>
+
+        <input type="checkbox" id="checkbox">
+        <label>Is a member</label>
+        <br><br>
+
+        <button onclick="check()">Submit</button>
+    </div>
+
+    <script>
+        function check(){
+            let isMember = document.getElementById("checkbox").checked;
+            let cartValue = Number(document.getElementById("cart-value").value);
+
+            if(cartValue >= 100 && isMember){
+                alert("Discount Applied: You are a member and cart value is above 100!");
+            }
+            else{
+                alert("No Discount: Either not a member or cart value is less than 100.");
+            }
+        }
+    </script>
+
+</body>
+</html>

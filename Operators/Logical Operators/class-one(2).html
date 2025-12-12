@@ -1,24 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logical operator class one</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: lightblue;
+        }
+
+        .box {
+            width: 350px;
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: red;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #aaa;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            background: green;
+            color: white;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: red;
+        }
+
+        .result {
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
 </head>
+
 <body>
+
+    <div class="box">
+        <h2>Login Form</h2>
+
+        <input type="text" id="userNameInput" placeholder="Enter Username or Email">
+        <input type="password" id="passwordInput" placeholder="Enter Password">
+
+        <button onclick="check()">Login</button>
+
+        <div class="result" id="result"></div>
+    </div>
+
     <script>
-        let userName = "UserName020"
+        let userName = "UserName020";
         let email = "example@gmail.com";
         let password = "1234";
 
-        let userNameInput = prompt("Enter a username or email : ")
-        let passwordInput = prompt("Enter a passsword : ")
+        function check() {
+            let userInput = document.getElementById("userNameInput").value;
+            let passInput = document.getElementById("passwordInput").value;
 
-        if ((userNameInput == "UserName" || userNameInput == email) && passwordInput == password) {
-            alert("Login Successful")
-        }
-        else{
-            alert("Login Fail")
+            if ((userInput == userName || userInput == email) && passInput == password) {
+                document.getElementById("result").style.color = "green";
+                document.getElementById("result").innerHTML = "Login Successful!";
+            }
+            else {
+                document.getElementById("result").style.color = "red";
+                document.getElementById("result").innerHTML = "Login Failed!";
+            }
         }
     </script>
+
 </body>
+
 </html>
