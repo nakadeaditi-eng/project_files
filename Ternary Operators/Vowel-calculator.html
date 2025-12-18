@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vowel Checker</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .box {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        input {
+            width: 80%;
+            padding: 8px;
+            font-size: 16px;
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        button {
+            padding: 8px 15px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #result {
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <h2>Vowel Checker</h2>
+
+        <p>Enter a single letter :</p>
+        <input type="text" id="letter" maxlength="1">
+
+        <br>
+        <button onclick="checkVowel()">Check Letter</button>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function checkVowel() {
+            let ch = document.getElementById("letter").value;
+
+            if (ch === "") {
+                document.getElementById("result").innerText = "Please enter a letter";
+            }
+            else if (
+                ch === 'a' || ch === 'e' || ch === 'i' || ch === 'o' || ch === 'u' ||
+                ch === 'A' || ch === 'E' || ch === 'I' || ch === 'O' || ch === 'U'
+            ) {
+                document.getElementById("result").innerText = `"${ch}" is a vowel`;
+            }
+            else {
+                document.getElementById("result").innerText = `"${ch}" is not a vowel`;
+            }
+        }
+    </script>
+
+</body>
+</html>
