@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <button onclick="samllPizza()">Small Pizza 150</button>
+    <button onclick="mediumPizza()">Medium Pizza 250</button>
+    <button onclick="largePizza()">Large Pizza 350</button>
+    <p id="display"></p>
+
+
+
+
+    <script>
+        let pizzaPrice = 0
+        let text = ""
+        function getPizza() {
+            switch (pizzaPrice) {
+                case 150:
+                    text = "You selected small pizza!";
+                    break;
+                case 250:
+                    text = "You selected medium pizza!";
+                    break;
+                default:
+                    text = "You selecetd large pizza!";
+            }
+        }
+
+        function smallPizza() {
+            pizzaPrice = 150
+            getPizza()
+        }
+        function mediumPizza() {
+            pizzaPrice = 250
+            getPizza()
+        }
+        function largePizza() {
+            pizzaPrice = 150
+            
+        }
+    </script>
+</body>
+
+</html>
