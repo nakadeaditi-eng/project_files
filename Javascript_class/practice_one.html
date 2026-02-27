@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Class</title>
+
+    <style>
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: lightcoral;
+        }
+
+        button {
+            width: 100px;
+            height: 40px;
+            border-radius: 5px;
+            background-color: lightgreen;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            padding: 5px;
+           
+        }
+        .display-box {
+            width: 200px;
+            height: 50px;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>JavaScript Class</h1>
+        <input type="text" id="myInput" placeholder="Enter first value...">
+        <br><br>
+        <input type="text" id="myInput2" placeholder="Enter second value...">
+        <br><br>
+        <div class="display-box" id="display"></div>
+        <br><br>
+        <button onclick="myFirstFunction()">Click Me</button>
+    </div>
+
+    <script>
+        function myFirstFunction() {
+            let x = Number(document.getElementById("myInput").value);
+           let y = Number(document.getElementById("myInput2").value);
+       let z = x + y;
+       document.getElementById("display").innerHTML = z;
+            console.log(z);
+
+            
+        }
+    </script>
+
+</body>
+</html>
