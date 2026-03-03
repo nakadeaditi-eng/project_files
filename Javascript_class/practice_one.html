@@ -1,70 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Class</title>
+    <title>Student Information</title>
 
     <style>
         .container {
             width: 100vw;
             height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
             background-color: lightcoral;
         }
 
+        input {
+            width: 220px;
+            padding: 6px;
+        }
+
         button {
-            width: 100px;
+            width: 120px;
             height: 40px;
-            border-radius: 5px;
             background-color: lightgreen;
             border: none;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             font-size: 16px;
-            padding: 5px;
-           
         }
-        .display-box {
-            width: 200px;
-            height: 50px;
-            background-color: lightblue;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 18px;
+
+        #result {
             margin-top: 20px;
+            padding: 20px;
+            background-color: #eaf6ea;
+            width: 350px;
+            display: none;
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <h1>JavaScript Class</h1>
-        <input type="text" id="myInput" placeholder="Enter first value...">
-        <br><br>
-        <input type="text" id="myInput2" placeholder="Enter second value...">
-        <br><br>
-        <div class="display-box" id="display"></div>
-        <br><br>
-        <button onclick="myFirstFunction()">Click Me</button>
-    </div>
 
-    <script>
-        function myFirstFunction() {
-            let x = Number(document.getElementById("myInput").value);
-           let y = Number(document.getElementById("myInput2").value);
-       let z = x + y;
-       document.getElementById("display").innerHTML = z;
-            console.log(z);
+<div class="container">
+    <h2>Student Information</h2>
 
-            
-        }
-    </script>
+    <input type="text" id="name" placeholder="Enter Name"><br><br>
+    <input type="number" id="age" placeholder="Enter Age"><br><br>
+    <input type="email" id="email" placeholder="Enter Email"><br><br>
+    <input type="text" id="gender" placeholder="Enter Gender"><br><br>
+    <input type="text" id="course" placeholder="Enter Course"><br><br>
+
+    <button onclick="showData()">Submit</button>
+
+    <div id="result"></div>
+</div>
+
+<script>
+function showData() {
+
+    let name = document.getElementById("name").value;
+    let age = document.getElementById("age").value;
+    let email = document.getElementById("email").value;
+    let gender = document.getElementById("gender").value;
+    let course = document.getElementById("course").value;
+
+    document.getElementById("result").innerHTML =
+        "<h3 style='color:blue;'>Submitted Information</h3>" +
+        "<p><span style='color:red; font-weight:bold;'>Name:</span> " +
+        "<span style='color:green; font-size:18px;'>" + name + "</span></p>" +
+
+        "<p><span style='color:red; font-weight:bold;'>Age:</span> " +
+        "<span style='color:green; font-size:18px;'>" + age + "</span></p>" +
+
+        "<p><span style='color:red; font-weight:bold;'>Email:</span> " +
+        "<span style='color:green; font-size:18px;'>" + email + "</span></p>" +
+
+        "<p><span style='color:red; font-weight:bold;'>Gender:</span> " +
+        "<span style='color:green; font-size:18px;'>" + gender + "</span></p>" +
+
+        "<p><span style='color:red; font-weight:bold;'>Course:</span> " +
+        "<span style='color:green; font-size:18px;'>" + course + "</span></p>";
+
+    document.getElementById("result").style.display = "block";
+}
+</script>
 
 </body>
 </html>

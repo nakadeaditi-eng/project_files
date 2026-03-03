@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Information Final</title>
+</head>
+
+<body style="background-color: lightcoral; text-align: center; font-family: Arial;">
+
+    <h2>Student Information</h2>
+
+    <input type="text" id="name" placeholder="Enter Name"><br><br>
+    <input type="number" id="age" placeholder="Enter Age"><br><br>
+    <input type="email" id="email" placeholder="Enter Email"><br><br>
+
+    <select id="gender">
+        <option value="">Select Gender</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+    </select>
+    <br><br>
+
+    <input type="text" id="course" placeholder="Enter Course"><br><br>
+
+    <button onclick="show()">Submit</button>
+
+    <br><br>
+
+    <div id="out">Output yaha aayega</div>
+
+    <script>
+        function show() {
+            var name = document.getElementById("name").value;
+            var age = document.getElementById("age").value;
+            var email = document.getElementById("email").value;
+            var gender = document.getElementById("gender").value;
+            var course = document.getElementById("course").value;
+
+            document.getElementById("out").innerHTML =
+                "<span style='color:red; font-size:22px; font-weight:bold;'>" +
+                "Name: " + name + "<br>" +
+                "Age: " + age + "<br>" +
+                "Email: " + email + "<br>" +
+                "Gender: " + gender + "<br>" +
+                "Course: " + course +
+                "</span>";
+        }
+    </script>
+
+</body>
+</html>
