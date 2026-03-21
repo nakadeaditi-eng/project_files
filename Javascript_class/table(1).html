@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table Generator</title>
+</head>
+
+<body>
+
+
+
+<input id="inp">
+<button onclick="generateTable()">Click</button>
+
+<h3>Output:</h3>
+<div id="output"></div>
+<div id="dis"></div>
+<div id="dis-one"></div>
+<div id="display"></div>
+
+<script>
+function generateTable() {
+    // let x = 1;
+    // a = Number(document.getElementById("inp").value);
+    // let output = "";
+    // while(x <= 10){
+    //      output += a + " x " + x + " = " + (a * x) + "<br>";
+    //     console.log(output);
+    //     x++;
+    //     document.getElementById("output").innerHTML = output;
+    // }
+     let word = document.getElementById("inp").value;
+     let y = 0;
+     let charOutput = "";
+    while(y < word.length){
+        
+         charOutput += word.charAt(y) + "<br>";
+        console.log(word.charAt(y));
+        // document.getElementById("dis").innerHTML += charOutput;
+        y++;
+    }
+
+     let reverse = "";
+    while(y >= 0){
+       
+         reverse += word.charAt(y) + "<br>";
+        console.log(reverse);
+        // document.getElementById("dis-one").innerHTML += reverse;
+        y--;
+    }
+    if(word == reverse){
+        alert("Please enter a word");
+        document.getElementById("display").innerHTML = " is Palindrome";
+     }
+     else{
+        document.getElementById("display").innerHTML = " is not Palindrome";
+     }
+       
+}
+
+// let a = "Hello";
+// console.log(a.length);
+// console.log(a.charAt(0));
+</script>
+
+</body>
+</html>

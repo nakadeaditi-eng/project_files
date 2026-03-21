@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table Generator</title>
+</head>
+
+<body>
+
+<h2>Table Generator</h2>
+
+<input type="number" id="num" placeholder="Enter a number">
+<button onclick="printTable()">Show Table</button>
+
+<script>
+
+
+window.onload = function() {
+    generateTable(2);
+};
+
+function printTable() {
+    let number = document.getElementById("num").value;
+
+    if(number === "") {
+        alert("Please enter a number");
+        return;
+    }
+
+    generateTable(number);
+}
+
+function generateTable(num) {
+    console.clear(); 
+    for(let i = 1; i <= 10; i++) {
+        console.log(num + " x " + i + " = " + (num * i));
+    }
+}
+
+</script>
+
+</body>
+</html>
