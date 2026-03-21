@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Area Calculator</title>
+</head>
+<body>
+
+<h4>JavaScript Class</h4>
+
+<input type="number" id="radius" placeholder="Enter radius">
+
+<br><br>
+
+<button onclick="findArea()">Click Me</button>
+
+<script>
+
+function findArea(){
+
+let r = document.getElementById("radius").value;
+
+// Circle area formula
+let area = Math.PI * r * r;
+
+console.log(area.toFixed(2));
+
+}
+
+</script>
+
+</body>
+</html>
