@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Electricity Bill Calculator</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+        }
+
+        .container {
+            width: 400px;
+            margin: 60px auto;
+            padding: 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+        }
+
+        button {
+            width: 95%;
+            padding: 10px;
+            background: linear-gradient(to right, pink, hotpink);
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #result {
+            background: black;
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            background: white;
+            color: black;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Electricity Bill Calculator</h2>
+
+    <label>Enter Units Consumed:</label><br>
+    <input type="number" id="units" placeholder="Units Consumed">
+
+    <label>Late Payment Days (if any):</label><br>
+    <input type="number" id="days" placeholder="Late Fees">
+
+    <button onclick="calculateBill()">Calculate Bill</button>
+
+    <div id="result"></div>
+
+    <table>
+        <tr>
+            <th>Range (in units)</th>
+            <th>Rate per unit</th>
+            <th>Surplus Charges</th>
+            <th>Late Fees</th>
+        </tr>
+        <tr>
+            <td>0-50</td>
+            <td>1.5rs</td>
+            <td>No Charge</td>
+            <td>10+ days: 20rs</td>
+        </tr>
+        <tr>
+            <td>51-150</td>
+            <td>2.5rs</td>
+            <td>5%</td>
+            <td>15+ days: 40rs</td>
+        </tr>
+        <tr>
+            <td>151-250</td>
+            <td>3.5rs</td>
+            <td>10%</td>
+            <td>25+ days: 100rs</td>
+        </tr>
+        <tr>
+            <td>251+</td>
+            <td>5rs</td>
+            <td>20%</td>
+            <td>180+ days: 20000rs</td>
+        </tr>
+    </table>
+</div>
+
+<script>
+function calculateBill() {
+    let units = document.getElementById("units").value;
+    let days = document.getElementById("days").value;
+    let amount = 0;
+
+    // Unit calculation
+    if (units <= 50) {
+        amount = units * 1.5;
+    } else if (units <= 150) {
+        amount = units * 2.5;
+        amount += amount * 0.05;
+    } else if (units <= 250) {
+        amount = units * 3.5;
+        amount += amount * 0.10;
+    } else {
+        amount = units * 5;
+        amount += amount * 0.20;
+    }
+
+    // Late fee calculation
+    let lateFee = 0;
+    if (days >= 180) {
+        lateFee = 20000;
+    } else if (days >= 25) {
+        lateFee = 100;
+    } else if (days >= 15) {
+        lateFee = 40;
+    } else if (days >= 10) {
+        lateFee = 20;
+    }
+
+    let total = amount + lateFee;
+
+    document.getElementById("result").innerHTML =
+        "Bill: ₹" + amount.toFixed(2) + "<br>" +
+        "Late Fee: ₹" + lateFee + "<br>" +
+        "<b>Total: ₹" + total.toFixed(2) + "</b>";
+}
+</script>
+
+</body>
+</html>3

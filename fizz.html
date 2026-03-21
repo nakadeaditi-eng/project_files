@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fizz Buzz Checker</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg,#6a11cb,#2575fc);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    width:320px;
+    text-align:center;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+h2{
+    margin-bottom:20px;
+}
+
+input{
+    width:90%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+button{
+    margin-top:15px;
+    padding:10px 20px;
+    border:none;
+    background:#2575fc;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#1b5ed6;
+}
+
+#dis-one{
+    margin-top:20px;
+    font-size:18px;
+    font-weight:bold;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Fizz Buzz Checker</h2>
+
+Enter Number:<br><br>
+<input type="number" id="input-one">
+
+<br><br>
+
+<button onclick="myFunction()">Check</button>
+
+<p id="dis-one"></p>
+
+</div>
+
+<script>
+
+function myFunction() {
+
+let age = Number(document.getElementById("input-one").value);
+
+if(age % 3 == 0 && age % 5 == 0){
+document.getElementById("dis-one").innerHTML = "Fizz-Buzz !"
+}
+
+else if(age % 3 == 0){
+document.getElementById("dis-one").innerHTML = "Fizz !"
+}
+
+else if(age % 5 == 0){
+document.getElementById("dis-one").innerHTML ="Buzz !"
+}
+
+else{
+document.getElementById("dis-one").innerHTML ="Not divisible by 3 or 5"
+}
+
+}
+
+</script>
+
+</body>
+</html>
