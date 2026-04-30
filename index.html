@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant Website</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .hero {
+        background: url("https://images.unsplash.com/photo-1504674900247-0877df9cc836")
+          center/cover no-repeat;
+        height: 80vh;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      .hero h1 {
+        font-size: 3rem;
+        font-weight: bold;
+      }
+      .card img {
+        height: 200px;
+        object-fit: cover;
+      }
+      .footer {
+        background: #111;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Foodies Hub</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="menu.html">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <
+    <section id="home" class="hero">
+      <div>
+        <h1>Welcome to Foodies Hub</h1>
+        <p>Fresh • Tasty • Delicious</p>
+        <a href="menu.html" class="btn btn-warning btn-lg">View Menu</a>
+      </div>
+    </section>
+
+    <section id="menu" class="p-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5">Our Menu</h2>
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-md-4">
+            <div class="card shadow">
+              <img
+                src="https://thumbs.dreamstime.com/b/slice-pizza-extra-cheese-hand-holding-variety-toppings-including-olives-peppers-mushrooms-fresh-piping-hot-358986159.jpg"
+                class="card-img-top"
+              />
+              <div class="card-body text-center">
+                <h5>Pizza</h5>
+                <p>Cheesy loaded pizza</p>
+                <button class="btn btn-primary">Order Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card shadow">
+              <img
+                src="https://images.unsplash.com/photo-1550547660-d9450f859349"
+                class="card-img-top"
+              />
+              <div class="card-body text-center">
+                <h5>Burger</h5>
+                <p>Juicy grilled burger</p>
+                <button class="btn btn-primary">Order Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card shadow">
+              <img
+                src="https://www.indianveggiedelight.com/wp-content/uploads/2022/12/white-sauce-pasta-featured.jpg"
+                class="card-img-top"
+              />
+              <div class="card-body text-center">
+                <h5>Pasta</h5>
+                <p>Creamy white sauce pasta</p>
+                <button class="btn btn-primary">Order Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card shadow">
+              <img
+                src="https://www.layersofhappiness.com/wp-content/uploads/2014/06/My-favorite-Vegetarian-sandwich-2-878x1024.jpg"
+                class="card-img-top"
+              />
+              <div class="card-body text-center">
+                <h5>Sandwich</h5>
+                <p>Healthy veggie sandwich</p>
+                <button class="btn btn-primary">Order Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card shadow">
+              <img
+                src="https://www.allrecipes.com/thmb/8_B6OD1w6h1V0zPi8KAGzD41Kzs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/50223-homemade-crispy-seasoned-french-fries-VAT-Beauty-4x3-789ecb2eaed34d6e879b9a93dd56a50a.jpg"
+                class="card-img-top"
+              />
+              <div class="card-body text-center">
+                <h5>Fries</h5>
+                <p>Crispy french fries</p>
+                <button class="btn btn-primary">Order Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card shadow">
+              <img
+                src="https://www.allrecipes.com/thmb/SI6dn__pfJb9G5eBpYAqkyGCLxQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/50050-five-minute-ice-cream-DDMFS-4x3-076-fbf49ca6248e4dceb3f43a4f02823dd9.jpg"
+                class="card-img-top"
+              />
+              <div class="card-body text-center">
+                <h5>Ice Cream</h5>
+                <p>Delicious desserts</p>
+                <button class="btn btn-primary">Order Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card shadow">
+              <img
+                src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c"
+                class="card-img-top"
+              />
+              <div class="card-body text-center">
+                <h5>Salad</h5>
+                <p>Fresh & healthy</p>
+                <button class="btn btn-primary">Order Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card shadow">
+              <img
+                src="https://i0.wp.com/mommyskitchenstory.com/wp-content/uploads/2022/02/Screenshot_20220226-003133_YouTube.jpg?resize=640%2C642&ssl=1"
+                class="card-img-top"
+              />
+              <div class="card-body text-center">
+                <h5>Noodles</h5>
+                <p>Spicy street style</p>
+                <button class="btn btn-primary">Order Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card shadow">
+              <img
+                src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTTbtWGOmXAuUTOqQKl_WtVxw2hEe7S_gXfscIxnl6D-sPYljtRJBVR3KERVGoueu8krT-AKmPUN5B8GGya0WunTffDmA80"
+                class="card-img-top"
+              />
+              <div class="card-body text-center">
+                <h5>Biryani</h5>
+                <p>Rich & flavorful</p>
+                <button class="btn btn-primary">Order Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card shadow">
+              <img
+                src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2010/4/26/0/FNM_060110-Bobby-Grilling-013_s4x3.jpg.rend.hgtvcom.1280.1280.suffix/1382539247827.webp"
+                class="card-img-top"
+              />
+              <div class="card-body text-center">
+                <h5>Steak</h5>
+                <p>Grilled perfection</p>
+                <button class="btn btn-primary">Order Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card shadow">
+              <img
+                src="https://www.realsimple.com/thmb/eI_UOvO1ps6__DiUGjwu9T6qb60=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/vodka-mojito-recipe-5192553-step_05-43680e4632544c72b77d72b24f7a482e.jpg"
+                class="card-img-top"
+              />
+              <div class="card-body text-center">
+                <h5>Cold Drink</h5>
+                <p>Chilled beverages</p>
+                <button class="btn btn-primary">Order Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card shadow">
+              <img
+                src="https://www.indianhealthyrecipes.com/wp-content/uploads/2022/03/lassi.jpg"
+                class="card-img-top"
+              />
+              <div class="card-body text-center">
+                <h5>Lassi</h5>
+                <p>Delicious yogurt drink</p>
+                <button class="btn btn-primary">Order Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="p-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Contact Us</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <form>
+              <input
+                type="text"
+                class="form-control mb-3"
+                placeholder="Your Name"
+              />
+              <input
+                type="email"
+                class="form-control mb-3"
+                placeholder="Your Email"
+              />
+              <textarea
+                class="form-control mb-3"
+                rows="4"
+                placeholder="Message"
+              ></textarea>
+              <button class="btn btn-success w-100">Send Message</button>
+            </form>
+            <div
+              id="successMsg"
+              class="alert alert-success mt-3 text-center d-none"
+            >
+              Message sent successfully!✅
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h5>Visit Us</h5>
+            <p>Pune, Maharashtra</p>
+            <p>Email: foodieshub@gmail.com</p>
+            <p>Phone: 9876543210</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      <p>© 2026 Foodies Hub | All Rights Reserved</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
